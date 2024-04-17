@@ -1,8 +1,13 @@
-import { useState } from 'react';
 import './App.css';
+import React from 'react';
+import ShortenerForm from './components/ShortnerForm';
 
-function App() {
-  return <></>;
-}
+const App = () => {
+  return (
+    <div>
+      <ShortenerForm />
+    </div>
+  );
+};
 
 export default App;
