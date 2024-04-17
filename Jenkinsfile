@@ -10,11 +10,11 @@ pipeline {
   }
 
   stages {
-    stage('Checkout') {
-        steps {
-            git 'https://github.com/kenneth-alt/stubby.io'
-        }
-    }
+    // stage('Checkout') {
+    //     steps {
+    //         git 'https://github.com/kenneth-alt/stubby.io'
+    //     }
+    // }
 
     stage('Build Client Image') {
       steps {
