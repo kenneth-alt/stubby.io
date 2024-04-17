@@ -11,7 +11,7 @@ const ShortenerForm = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${baseUrl}/api/shorten`, { longUrl }`);
+      const response = await axios.post(`${baseUrl}/api/shorten`, { longUrl });
       setShortUrl(response.data.shortUrl);
       setError('');
     } catch (error) {
