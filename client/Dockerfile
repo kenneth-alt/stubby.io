@@ -18,4 +18,6 @@ COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 80
 
+USER node
+
 CMD ["nginx", "-g", "daemon off;"]
