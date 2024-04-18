@@ -39,7 +39,7 @@ pipeline {
       stage('Push Images to Docker Hub') {
         steps {
           script {
-            docker.withRegistry('https://index.docker.io/v1/', DOCKER_HUB_USERNAME, DOCKER_HUB_PASSWORD) {
+            docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-password') {
               docker.image("${CLIENT_IMAGE_NAME}:${DOCKER_IMAGE_TAG}").push()
               docker.image("${SERVER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}").push()
             }
